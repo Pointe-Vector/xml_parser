@@ -1,8 +1,11 @@
 name: Publish distributions to PyPI and TestPyPI
-on: push
+on:
+  push:
+    branches:
+        - main
 
 jobs:
-  distribute:
+  build:
     name: Build and publish core distribution
     runs-on: ubuntu-latest
     steps:
